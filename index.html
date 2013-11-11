@@ -1,33 +1,37 @@
 ﻿<html>
-<head>
-  <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css' rel='stylesheet' />
-    <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
-  <!--[if lte IE 8]>
-    <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.ie.css' rel='stylesheet' />
-  <![endif]-->
-    <script src='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'></script>
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-  <style>
-  #map {
-    width:900px;
-    height:600px;
-  }
-  </style>
-</head>
+    <head>
+        <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css' rel='stylesheet' />
+        <link href="Content/bootstrap.css" rel="stylesheet" />
+        <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+        <!--[if lte IE 8]>
+            <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.ie.css' rel='stylesheet' />
+        <![endif]-->
+        <script src='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'></script>
+        <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <style>
+            #map {
+                width:700px;
+                height:400px;
+                margin: 0px 20px;
+            }
+        </style>
+    </head>
     <body>
-        <div class="col-lg-7">
-        <div id='map' class='dark'></div>
+        <div class="col-md-12 page-header">
+            <h1>Polar lows</h1>
         </div>
-        <div class="col-lg-5">    
-        <h1>Polar lows</h1>
-            <p>This map shows a large number of polar lows detected by AMSR-E and SSM/I data analysis for 1995&mdash;2009 time range. Different sizes of markers indicates cyclone diameter.</p>
-            <p>Data has been prepared with <a href="https://www.mapbox.com/tilemill/">TileMill</a> and integrated with <a href="https://www.mapbox.com/mapbox.js">Mapbox.js</a>.</p>
-            <p>&copy; Data source: Julia Smirnova (SOLab), 2012</p>
-            <p><a href="mailto:ilya@rshu.ru">Ilya Bolkhovsky</a>, 2013</p>
+        <div class="row ">
+            <div id='map' class="dark col-md-7">
+            </div>
+            <div class="col-md-5">    
+                
+                <p>This map shows a large number of polar lows detected by AMSR-E and SSM/I data analysis for 1995&mdash;2009 time range. Different sizes of markers indicates cyclone diameter.</p>
+                <p>Data has been prepared with <a href="https://www.mapbox.com/tilemill/">TileMill</a> and integrated with <a href="https://www.mapbox.com/mapbox.js">Mapbox.js</a>.</p>
+                <p>&copy; Data source: Julia Smirnova (SOLab), 2012</p>
+                <p><a href="mailto:ilya@rshu.ru">Ilya Bolkhovsky</a>, 2013</p>
+            </div>
         </div>
-
         <script type='text/javascript'>
             var map = L.mapbox.map('map', 'bolkhovsky.g7nh3669');
             map.on('load', function () {
